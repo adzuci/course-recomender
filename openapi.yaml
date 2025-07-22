@@ -1,0 +1,79 @@
+openapi: 3.0.1
+info:
+  title: Course Recommendation Plugin
+  description: API for AI-powered course and enrollment recommendations
+  version: '1.0.0'
+servers:
+  - url: https://your-api-gateway-url.example.com
+paths:
+  /recommendations:
+    get:
+      summary: Get recommended courses
+      operationId: getRecommendations
+      parameters:
+        - name: student_id
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: List of recommended courses
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  recommendations:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/CourseRecommendation'
+  /enrollments:
+    get:
+      summary: Get student enrollment data
+      operationId: getEnrollments
+      parameters:
+        - name: student_id
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: List of enrolled courses
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  enrollments:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Enrollment'
+components:
+  schemas:
+    CourseRecommendation:
+      type: object
+      properties:
+        course_id:
+          type: string
+        title:
+          type: string
+        description:
+          type: string
+        score:
+          type: number
+        explanation:
+          type: string
+    Enrollment:
+      type: object
+      properties:
+        course_id:
+          type: string
+        title:
+          type: string
+        description:
+          type: string
+        enrolled_on:
+          type: string
+          format: date 

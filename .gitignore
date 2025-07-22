@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+
+# General
+.env
+*.sqlite3
+*.db
+.DS_Store
+.idea/
+.vscode/
+dist/ 
