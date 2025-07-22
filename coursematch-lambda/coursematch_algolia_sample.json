@@ -1,0 +1,26 @@
+[
+  {
+    "objectID": "ai301",
+    "title": "AI for Beginners",
+    "description": "Learn the basics of AI.",
+    "tags": ["ai", "beginner"],
+    "prerequisites": ["cs101"],
+    "embedding": [0.12, 0.34, 0.56, 0.78]
+  },
+  {
+    "objectID": "ds101",
+    "title": "Data Science Fundamentals",
+    "description": "Intro to data science concepts.",
+    "tags": ["data-science", "beginner"],
+    "prerequisites": ["math201"],
+    "embedding": [0.22, 0.44, 0.66, 0.88]
+  },
+  {
+    "objectID": "cs101",
+    "title": "Intro to CS",
+    "description": "Basics of computer science.",
+    "tags": ["cs", "intro"],
+    "prerequisites": [],
+    "embedding": [0.11, 0.22, 0.33, 0.44]
+  }
+] 

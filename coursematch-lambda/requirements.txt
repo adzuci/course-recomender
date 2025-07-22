@@ -1,0 +1,2 @@
+# No external dependencies required for mock
+# Compatible with Python 3.11 
